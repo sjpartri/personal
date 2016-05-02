@@ -45,7 +45,7 @@
 
 	/*Set Background CSS Properties*/
 	body { 
-		background-image:url("../images/gray.jpg");
+		background-image:url("images/gray.jpg");
 		padding-top: 50px;
 	}
 
@@ -178,9 +178,9 @@
 
 	/*Css Class Styling for class for header*/
 	.header{
+		background-image: url("images/wood.jpg");
 		padding-top: 10px;
 		padding-bottom: 20px;
-		background-image: url("images/wood.jpg");
 		background-size: cover;
 	}
 
