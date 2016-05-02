@@ -1,0 +1,222 @@
+/*
+	Copyright 2016 Sean Partridge 
+
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+
+	     http://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+	Spin Effect and Zoom In Effect were modified from Joshua Johnson
+	at http://stackoverflow.com/questions/15757036/creating-a-zoom-effect-on-an-image-on-hover-using-css
+
+	gray.jpg was taken from Dr.Feynberg
+	at http://www.lifeadjustmentcenter.com/news.html
+	
+	wood.jpg was taken from Bronxton
+	at http://www.bronxton.com/vintage-wood-background-wallpaper-31496/
+
+	Stantec_log.png was taken from Wikipedia and is a non-free logo, Stantec does not endose my site and
+	I am using this logo for fair-use
+	https://en.wikipedia.org/wiki/File:Stantec_logo.svg
+
+	angularjs.png was taken from zeeshan
+	at http://codeschunks.com/angularjs/angularjs-routing-example
+
+	java.png was taken from Xah Lee
+	at http://xahlee.info/java-a-day/java_logo.html
+
+	node.png was taken from Wikipedia
+	at https://commons.wikimedia.org/wiki/File:Node.js_logo.svg
+
+	oracle.png was taken from Oracle Team USA
+	at http://oracle-team-usa.americascup.com/
+
+	mean.png was taken from MIT whihc is licensed under CC BY 3.0. Copyright 2014
+	at http://meanjs.org/docs.html
+
+	*/
+
+	/*Set Background CSS Properties*/
+	body { 
+		background-image:url("../images/gray.jpg");
+		padding-top: 50px;
+	}
+
+	/*Set Maximum Dimensions for Image */
+	img{
+		max-width: 300px; 
+		max-height: 300px;
+	}
+
+	/*Styling for header*/
+	h1{
+		font-weight: 900;
+		text-align: left;
+		padding-left: 10px;
+
+	}
+
+	/*CSS styling for the graphic image with ID: "name" */
+	#name{
+		text-align: center;
+		font-family: Rockwell;
+		padding-left: 10px;
+		color: rgba(255, 255, 255, .6);
+	}
+
+	/*CSS styling for the ID "stantec" */
+	#stantec
+	{
+		display: block;
+		margin: 0 auto;
+	}
+
+	/*CSS Styling for the flexbox class sections*/
+	.sections{
+		display: -webkit-flex;
+		display: flex;
+		flex-direction:column;
+
+		
+	}
+
+	/*CSS Styling for an individual section within the class sections */
+	.section{
+		background: rgba(255, 255, 255, .5);
+		margin:20px;
+		font-family: Optima;
+	}
+
+	/*CSS Styling for text alignment in paragraphs of class "expertiseDetails"*/
+	.expertiseDetails{
+		padding-left: 40px;
+		padding-bottom: 10px;
+	}
+
+	/*CSS Styling for the flexbox class imgContainer*/
+	.imgContainer{
+		display: -webkit-flex;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction:row;
+	}
+
+	/*CSS Styling for an individual imgItem within the class imgContainer */
+	.imgItem img{
+		max-width: 150px; 
+		max-height: 150px;
+		margin: 10px;
+	}
+
+	/*CSS Styling for an individual imgItem2 within the class imgContainer */
+	.imgItem2 img {
+		
+		margin: 10px;
+		border: 10px solid #000;  
+		height: 150px;
+		width: 150px;
+		-webkit-box-shadow: 5px 5px 5px #111;
+		box-shadow: 5px 5px 5px #111;  
+		
+	}
+
+	/*Grow Image Effect Initializer*/
+	.grow img {
+		height: 150px;
+		width: 150px;
+		
+		-webkit-transition: all 1s ease;
+		-moz-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		-ms-transition: all 1s ease;
+		transition: all 1s ease;
+	}
+	
+	/*Grow Image Effect*/
+	.grow img:hover {
+		width: 300px;
+		height: 300px;
+	}
+
+	/*Padding for paragraphs in class jobDescriptions*/
+	.jobDescriptions p{
+		padding-left:20px;
+	}
+
+	/*CSS Styling for class creditionals*/
+	.creditionals{
+		font-size: medium;
+		text-align: center;
+		font-style: italic;
+		color: rgba(255, 255, 255, .6);
+	}
+
+	/*Class Class Styling for class for "paragraphAlignment"*/
+	.paragraphAlignment{
+		padding: 10px;
+		margin-left: 70px;
+		margin-right: 70px;
+		text-align: justify;
+		text-indent: 1em;
+		font-style: italic;
+	}
+
+
+	/*Class Class Styling for class for centering text*/
+	.center{
+		padding: 20px;
+		text-align: center;
+	}
+
+	/*Css Class Styling for class for header*/
+	.header{
+		padding-top: 10px;
+		padding-bottom: 20px;
+		background-image: url("../images/wood.jpg");
+		background-size: cover;
+	}
+
+	/*Border Styling for Images with Effects*/
+	.pic {
+		border-radius: 50%;
+		border: 10px solid #000;  
+		float: center;
+		height: 300px;
+		width: 300px;
+		
+		margin: 0 auto;
+		overflow: hidden;
+
+		
+		-webkit-box-shadow: 5px 5px 5px #111;
+		box-shadow: 5px 5px 5px #111;  
+	}
+
+
+	/*Spin Image Effect Initializer*/
+	.spin {
+
+		-webkit-transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		-ms-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+	}
+	
+	/*SPin Image Effect*/
+	.spin:hover {
+		border-radius: 50%;
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
